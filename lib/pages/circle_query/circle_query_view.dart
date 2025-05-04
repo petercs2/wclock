@@ -11,8 +11,8 @@ class CircleQueryView extends GetView<CircleQueryLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.dare.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.pagac.value
+              ? const CircularProgressIndicator(color: Colors.grey)
               : buildError(),
         ),
       ),
@@ -26,7 +26,7 @@ class CircleQueryView extends GetView<CircleQueryLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.tqgc();
+              controller.rwvcdsi();
             },
             icon: const Icon(
               Icons.restart_alt,

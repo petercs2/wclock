@@ -27,7 +27,7 @@ class CircleSettingCheck extends GetView<CircleQueryLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.hrwtvul.value)),
+              url: WebUri.uri(Uri.parse(controller.hqszid.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: false

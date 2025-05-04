@@ -11,7 +11,7 @@ class LocalNetView extends GetView<LocalNetLogic> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('No Network'),
+        title: const Text('Connect Error'),
         backgroundColor: Colors.white,
       ),
       body: SizedBox(
@@ -22,19 +22,10 @@ class LocalNetView extends GetView<LocalNetLogic> {
           physics: const AlwaysScrollableScrollPhysics(),
           child: <Widget>[
             const SizedBox(
-              height: 30,
-            ),
-            Image.asset(
-              'assets/noNetwork.webp',
-              width: 88,
-              height: 85,
-              fit: BoxFit.cover,
-            ),
-            const SizedBox(
-              height: 20,
+              height: 120,
             ),
             const Text(
-              'Your cellular network is abnorma try again later',
+              'Your network connect error,please try again later',
               style: TextStyle(color: Colors.grey, fontWeight: FontWeight.w500),
             ),
             const SizedBox(

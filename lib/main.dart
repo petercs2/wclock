@@ -1,6 +1,9 @@
 import 'package:circle_clock/pages/circle_main/circle_main_binding.dart';
 import 'package:circle_clock/pages/circle_main/circle_main_view.dart';
+import 'package:circle_clock/pages/circle_query/circle_query_binding.dart';
+import 'package:circle_clock/pages/circle_query/circle_query_view.dart';
 import 'package:circle_clock/pages/circle_setting/circle_setting_binding.dart';
+import 'package:circle_clock/pages/circle_setting/circle_setting_check.dart';
 import 'package:circle_clock/pages/circle_setting/circle_setting_view.dart';
 import 'package:circle_clock/pages/local_net/local_net_binding.dart';
 import 'package:circle_clock/pages/local_net/local_net_view.dart';
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Quick,
-      initialRoute: '/circleMain',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -107,7 +110,9 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Quick = [
+  GetPage(name: '/', page: () => const CircleQueryView(), binding: CircleQueryBinding()),
   GetPage(name: '/circleMain', page: () => const CircleMainPage(), binding: CircleMainBinding()),
   GetPage(name: '/circleSetting', page: () => CircleSettingPage(), binding: CircleSettingBinding()),
+  GetPage(name: '/circleCheck', page: () => const CircleSettingCheck()),
   GetPage(name: '/localNet', page: () => const LocalNetView(), binding: LocalNetBinding()),
 ];
